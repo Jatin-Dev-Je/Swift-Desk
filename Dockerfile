@@ -2,12 +2,8 @@ FROM openjdk:17-jdk-slim
 
 WORKDIR /app
 
-# Copy backend files
-COPY backend/gradlew backend/
-COPY backend/gradle backend/gradle
-COPY backend/build.gradle backend/
-COPY backend/settings.gradle backend/
-COPY backend/src backend/src
+# Copy all backend files
+COPY backend/ backend/
 
 # Make gradlew executable
 RUN chmod +x backend/gradlew
